@@ -1,0 +1,33 @@
+/* ----------------------------------------------- *\
+    Service Card
+\* ----------------------------------------------- */
+.service-card {
+    padding: 50px;
+    text-align: center;
+
+    .-header {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 50px;
+            margin: auto;
+        }
+
+        .-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+
+    .-content {
+        padding-top: 25px;
+        font-size: 1.1rem;
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+    }
+}

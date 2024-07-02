@@ -1,0 +1,65 @@
+:root {
+    // Palette
+    --c-primary: #25327e;
+    --c-secondary: #2f3f9e;
+    --c-three: #26b7f7;
+    --c-four: #24a79c;
+
+    // Primary colors
+    --c-white: #ffffff;
+    --c-gray: #a9a9a9;
+    --c-silver: #c8c8c8;
+    --c-red: #c00000;
+    --c-darkRed: #8B0000;
+    --c-green: #188038;
+    --c-orange: #ffa500;
+    --c-blue: #2962ff;
+    --c-black: #000000;
+
+    // Specific colors
+    --c-twilight-gray: #777e8f;
+    --c-gray85: #d9d9d9;
+    --c-lightGray: #f2f2f2;
+    --c-dimmGray: #696969;
+    --c-lightGreen: #a8f1c6;
+    --c-greenLime: #198344;
+    --c-darkBlue: #0b12c1;
+    --c-lightOrange: #fff9f0;
+    --c-darkRed: #8B0000;
+    --c-lightRed: #ffe0e3;
+}
+
+@mixin desktop {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tiny_mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+
+// Imports
+@import "./parts/site";
+@import "./parts/helper";
+@import "./parts/form";
+@import "./parts/button";
+@import "./parts/card_service";
+@import "./parts/card_about";
+@import "./parts/card_price";
+@import "./parts/notification";
