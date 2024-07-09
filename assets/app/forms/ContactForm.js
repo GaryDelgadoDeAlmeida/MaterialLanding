@@ -58,7 +58,7 @@ export default function ContactForm() {
                 <Notification {...formResponse} />
             }
 
-            <form className={"form"} onSubmit={(e) => handleSubmit(e)}>
+            <form className={"form form-contact"} onSubmit={(e) => handleSubmit(e)}>
                 <div className={"form-field-inline"}>
                     <div className={"form-field"}>
                         <input
@@ -100,7 +100,7 @@ export default function ContactForm() {
 
                 <div className={"form-actions txt-left-force"}>
                     <button type={"submit"} className={"btn btn-primary -inline-flex"}>
-                        <img src={`${window.location.origin}/content/svg/fly-paper.svg`} alt={""} />
+                        <img src={`${window.location.origin}/content/svg/paper-plane-white.svg`} alt={""} />
                         <span>Send</span>
                     </button>
                 </div>

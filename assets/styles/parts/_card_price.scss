@@ -1,4 +1,5 @@
 .pricing-list {
+    gap: 15px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
@@ -12,5 +13,96 @@
 }
 
 .price-card {
-    // 
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    .-img-background {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        overflow: none;
+        position: absolute;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &.-gray .-content {
+        background-color: #78706e;
+    }
+
+    &.-blue .-content {
+        background-color: #52aa94;
+    }
+
+    &.-red .-content {
+        background-color: #f86f5e;
+    }
+
+    .-content {
+        z-index: 2;
+        padding: 50px;
+        position: relative;
+        opacity: .8;
+        background-color: var(--c-white);
+
+        .-top {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    
+        .-center {
+            padding: 50px 0;
+            font-size: 3rem;
+
+            label {
+                // margin: 0;
+                display: flex;
+                align-items: end;
+                justify-content: center;
+
+                sup {
+                    top: 0;
+                    align-self: baseline;
+                    font-size: 50px;
+                }
+
+                span {
+                    font-size: 100px;
+                }
+            }
+        }
+    
+        .-bottom {
+            // 
+
+            ul {
+                padding: 0 0 50px 0;
+                list-style: none;
+
+                li {
+                    padding: 10px 0;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+
+                    b {
+                        font-weight: 800;
+                    }
+                }
+            }
+
+            .btn-outline-white {
+                font-weight: 600;
+                padding: 1rem 3rem;
+                border: 2px solid var(--c-white);
+                box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+            }
+        }
+    }
 }

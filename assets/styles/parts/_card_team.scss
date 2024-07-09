@@ -1,0 +1,64 @@
+.team-card {
+    gap: 25px;
+    display: flex;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .-header {
+        width: 250px;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0.46875rem 2.1875rem rgba(0,0,0,.03), 0 0.9375rem 1.40625rem rgba(0,0,0,.03), 0 0.25rem 0.53125rem rgba(0,0,0,.05), 0 0.125rem 0.1875rem rgba(0,0,0,.03);
+        }
+    }
+
+    .-content {
+        flex: 1;
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+
+        .-fullname {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--c-black);
+        }
+
+        .-job {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #55888a;
+        }
+
+        .-bio {
+            font-weight: 400;
+            font-size: 1rem;
+            color: var(--c-twilight-gray);
+        }
+
+        .-social-link {
+            gap: 5px;
+            display: flex;
+            color: #0076df;
+            text-decoration: none;
+
+
+            span, img {
+                margin: auto 0;
+            }
+
+            img {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}

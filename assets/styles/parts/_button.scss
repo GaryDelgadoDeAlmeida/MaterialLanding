@@ -23,10 +23,20 @@ button {
     &.-inline-flex {
         gap: 10px;
         display: inline-flex;
+        padding: 10px 1.5rem;
+
+        &:hover img {
+            transition: .3s ease;
+            filter: invert(1);
+        }
 
         img {
             width: 100%;
-            max-width: 35px;
+            max-width: 25px;
+        }
+
+        span {
+            margin: auto 0;
         }
     }
 

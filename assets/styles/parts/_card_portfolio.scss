@@ -1,0 +1,83 @@
+.portfolio-card {
+    gap: 50px;
+    display: flex;
+    padding: 100px 0;
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &:first-child {
+        padding-top: 50px;
+    }
+
+    &:not(:first-child) {
+        border-top: 1px solid var(--c-silver);
+    }
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    > .-header {
+        margin: auto;
+        max-width: 500px;
+
+        @include tablet {
+            margin: auto 0;
+            max-width: 100%;
+        }
+
+        > img {
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 0 0.46875rem 2.1875rem rgba(0,0,0,.03), 0 0.9375rem 1.40625rem rgba(0,0,0,.03), 0 0.25rem 0.53125rem rgba(0,0,0,.05), 0 0.125rem 0.1875rem rgba(0,0,0,.03);
+        }
+    }
+
+    .-content {
+        flex: 1;
+
+        .-categories {
+            gap: 25px;
+            display: flex;
+            flex-direction: column;
+
+            .-category {
+                gap: 25px;
+                display: flex;
+
+                .-header {
+                    margin: 0 auto;
+
+                    img {
+                        width: 40px;
+                    }
+                }
+
+                .-content {
+                    gap: 10px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .-title {
+                        margin: 0;
+                        padding: 0;
+                        font-weight: 800;
+                        font-size: 1.3rem;
+                    }
+
+                    .-description {
+                        margin: 0;
+                        font-size: 1.1rem;
+                        color: var(--c-twilight-gray);
+                    }
+                }
+            }
+        }
+    }
+}

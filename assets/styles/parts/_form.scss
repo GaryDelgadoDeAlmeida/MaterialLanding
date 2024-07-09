@@ -104,4 +104,13 @@
             margin-left: 10px;
         }
     }
+
+    &.form-contact {
+
+        input:not([type="file"]), textarea {
+            border: none;
+            border-radius: 0;
+            border-bottom: 2px solid var(--c-twilight-gray);
+        }
+    }
 }

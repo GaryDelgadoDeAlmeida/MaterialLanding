@@ -317,9 +317,15 @@ html, body, .page {
 
             .page-description {
                 padding: 0;
-                margin: 0 0 50px 0;
-                color: var(--c-twilight-gray);
+                font-weight: 300;
                 font-size: 1.5rem;
+                margin: 0 0 100px 0;
+                text-align: center;
+                color: var(--c-twilight-gray);
+
+                &.-white {
+                    color: var(--c-white);
+                }
             }
 
             .newsletter-section {
@@ -375,6 +381,60 @@ html, body, .page {
                     @include tablet {
                         .form-field-inline {
                             justify-content: end;
+                        }
+                    }
+                }
+            }
+
+            .contact-infos {
+                gap: 25px;
+                padding: 25px;
+                display: flex;
+                border-radius: 5px;
+                background-color: var(--c-white);
+
+                @include tablet {
+                    flex-direction: column-reverse;
+                }
+
+                .-item:nth-child(1) {
+                    width: 70%;
+
+                    @include tablet {
+                        width: 100%;
+                    }
+                }
+
+                .-item:nth-child(2) {
+                    flex: 1;
+                    margin: auto;
+                }
+
+                .-contact-coordinates {
+                    gap: 50px;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include tablet {
+                        flex-direction: row;
+                    }
+
+                    @include mobile {
+                        flex-direction: column;
+                    }
+
+                    .-coordinate {
+                        gap: 10px;
+                        display: flex;
+                        flex-direction: column;
+
+                        img {
+                            width: 35px;
+                            margin: auto;
+                        }
+
+                        span {
+                            text-align: center;
                         }
                     }
                 }

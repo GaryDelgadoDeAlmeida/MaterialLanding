@@ -4,6 +4,7 @@
     --c-secondary: #2f3f9e;
     --c-three: #26b7f7;
     --c-four: #24a79c;
+    --c-five: #683ccd;
 
     // Primary colors
     --c-white: #ffffff;
@@ -62,4 +63,6 @@
 @import "./parts/card_service";
 @import "./parts/card_about";
 @import "./parts/card_price";
+@import "./parts/card_portfolio";
+@import "./parts/card_team";
 @import "./parts/notification";

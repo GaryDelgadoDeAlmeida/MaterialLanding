@@ -17,6 +17,10 @@
     text-align: right;
 }
 
+.txt-uppercase {
+    text-transform: uppercase;
+}
+
 .align-center {
     align-content: center;
 }
@@ -122,11 +126,19 @@
     }
 
     @include tablet {
-        grid-template-columns: repeat(2, 1fr);
+        &.-col-3 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &.-col-2 {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
     
-    @include tablet {
-        grid-template-columns: repeat(1, 1fr);
+    @include mobile {
+        &.-col-3 {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 }
 
@@ -144,4 +156,12 @@
 
 .-g-15 {
     gap: 15px;
+}
+
+.-g-25 {
+    gap: 25px;
+}
+
+.-g-50 {
+    gap: 50px;
 }
